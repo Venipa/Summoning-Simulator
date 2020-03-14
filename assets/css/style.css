@@ -46,23 +46,25 @@ header::before {
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 3rem 0;
 }
 
-main .container {
+main .summoning-top {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  flex: 1;
 }
 
 main .summoning-scrolls,
 main .summoning,
-main .summoning-stats {
+main .summoning-stats,
+main .summoning-latest {
   border-radius: 0.25rem;
   background-color: #FEFBF5;
-  padding: 1rem;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.008),0 6.7px 5.3px rgba(0, 0, 0, 0.012),0 12.5px 10px rgba(0, 0, 0, 0.015),0 22.3px 17.9px rgba(0, 0, 0, 0.018),0 41.8px 33.4px rgba(0, 0, 0, 0.022),0 100px 80px rgba(0, 0, 0, 0.03);
 }
 
@@ -70,6 +72,7 @@ main .summoning-scrolls {
   width: 320px;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 
 main .summoning-scrolls ul {
@@ -91,6 +94,7 @@ main .summoning-scrolls ul li {
   font-weight: 600;
 }
 
+main .summoning-scrolls ul li.active,
 main .summoning-scrolls ul li:hover,
 main .summoning-scrolls ul li:focus {
   background-color: #F9DC9F;
@@ -123,6 +127,7 @@ main .summoning-scrolls ul li .label {
   font-weight: 600;
 }
 
+main .summoning-scrolls ul li.active .label,
 main .summoning-scrolls ul li:hover .label,
 main .summoning-scrolls ul li:focus .label {
   background-color: transparent;
@@ -137,6 +142,7 @@ main .summoning {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 main .summoning .loading {
@@ -205,11 +211,30 @@ main .summoning-stats {
 main .summoning-stats .stats-row {
   display: flex;
   flex-direction: row;
+  padding: 1rem;
+  border-bottom: 1px solid #E7E9EF;
+}
+
+main .summoning-stats .stats-row:last-child {
+  border-bottom: none;
 }
 
 main .summoning-stats .stats-row .amount {
   margin-left: auto;
   font-weight: 600;
+  color: #8B6109;
+}
+
+main .summoning-latest {
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 137px;
+}
+
+main .summoning-latest img {
+  border-radius: 0.5rem;
+  margin-right: 1rem;
 }
 
 footer {

@@ -13,45 +13,45 @@
       </div>
     </header>
     <main>
-      <div class="container">
+      <div class="container summoning-top">
         <div class="summoning-scrolls">
-          <ul>
-            <li>
+          <ul id="scrolls">
+            <li id="legendary">
               <div class="scroll">
                 <img src="assets/img/scrolls/scroll_legendary.png" />
               </div>
               <div class="scroll-title">Legendary Scroll</div>
               <div class="label">4-5</div>
             </li>
-            <li>
+            <li id="ld">
               <div class="scroll">
                 <img src="assets/img/scrolls/scroll_lightdark.png" />
               </div>
               <div class="scroll-title">Light & Darkness Scroll</div>
               <div class="label">3-5</div>
             </li>
-            <li>
+            <li id="mystical">
               <div class="scroll">
                 <img src="assets/img/scrolls/scroll_mystical.png" />
               </div>
               <div class="scroll-title">Mystical Scroll</div>
               <div class="label">3-5</div>
             </li>
-            <li>
+            <li id="fire">
               <div class="scroll">
                 <img src="assets/img/scrolls/scroll_fire.png" />
               </div>
               <div class="scroll-title">Fire Scroll</div>
               <div class="label">3-5</div>
             </li>
-            <li>
+            <li id="water">
               <div class="scroll">
                 <img src="assets/img/scrolls/scroll_water.png" />
               </div>
               <div class="scroll-title">Water Scroll</div>
               <div class="label">3-5</div>
             </li>
-            <li>
+            <li id="wind">
               <div class="scroll">
                 <img src="assets/img/scrolls/scroll_wind.png" />
               </div>
@@ -73,14 +73,30 @@
         </div>
         <div class="summoning-stats">
           <div class="stats-row">Monsters Summoned: <div class="amount" id="stats-total">0</div></div>
+          <div class="stats-row">3* Summoned: <div class="amount" id="stats-threestar">0</div></div>
+          <div class="stats-row">4* Summoned: <div class="amount" id="stats-fourstar">0</div></div>
+          <div class="stats-row">5* Summoned: <div class="amount" id="stats-fivestar">0</div></div>
+          <div class="stats-row">Fire: <div class="amount" id="stats-fire">0</div></div>
+          <div class="stats-row">Water: <div class="amount" id="stats-water">0</div></div>
+          <div class="stats-row">Wind: <div class="amount" id="stats-wind">0</div></div>
+          <div class="stats-row">Light: <div class="amount" id="stats-light">0</div></div>
+          <div class="stats-row">Dark: <div class="amount" id="stats-dark">0</div></div>
         </div>
       </div>
+      <!--
+      <div class="container">
+        <div class="summoning-latest" id="latest">
+
+        </div>
+      </div>
+      -->
     </main>
     <footer>
       <div class="container">
         &copy; 2020
       </div>
     </footer>
+    <script type="text/javascript" src="assets/js/monsters.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
   </body>
 </html>
