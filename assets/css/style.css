@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background-color: #F7F8FA;
+  background-color: #FBE6BB;
   font-size: 16px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
@@ -61,8 +61,7 @@ main .summoning-scrolls,
 main .summoning,
 main .summoning-stats {
   border-radius: 0.25rem;
-  background-color: #FFF;
-  border: 1px solid #E7E9EF;
+  background-color: #FEFBF5;
   padding: 1rem;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.008),0 6.7px 5.3px rgba(0, 0, 0, 0.012),0 12.5px 10px rgba(0, 0, 0, 0.015),0 22.3px 17.9px rgba(0, 0, 0, 0.018),0 41.8px 33.4px rgba(0, 0, 0, 0.022),0 100px 80px rgba(0, 0, 0, 0.03);
 }
@@ -154,7 +153,6 @@ main .summoning .loading {
 main .summoning .monster {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #8B6109;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,18 +167,53 @@ main .summoning .monster .monster-name {
 
 main .summoning .monster .monster-awaken {
   font-size: 2rem;
+  color: #8B6109;
+}
+
+main .summoning .monster .monster-stars {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+main .summoning .monster .monster-stars .star {
+  background-image: url(../img/star.svg);
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+}
+
+main .summoning .monster .monster-stars .star:last-child {
+  margin-right: 0;
 }
 
 main .summoning .monster .monster-image {
   margin-top: 2rem;
 }
 
+main .summoning .monster .monster-image img {
+  border-radius: 0.5rem;
+}
+
 main .summoning-stats {
   width: 320px;
 }
 
+main .summoning-stats .stats-row {
+  display: flex;
+  flex-direction: row;
+}
+
+main .summoning-stats .stats-row .amount {
+  margin-left: auto;
+  font-weight: 600;
+}
+
 footer {
-  background-color: #FFF;
+  background-color: #FEFBF5;
   padding: 1rem 0;
   font-size: 0.8rem;
   font-weight: 600;

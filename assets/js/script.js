@@ -8,6 +8,13 @@ const monsters = [
     image: '/assets/img/monsters/loren.png'
   },
   {
+    name: 'Gargoyle',
+    awakenName: 'Malite',
+    element: 'Wind',
+    stars: 4,
+    image: '/assets/img/monsters/malite.png'
+  },
+  {
     name: 'Hell Lady',
     awakenName: 'Beth',
     element: 'Water',
@@ -30,6 +37,9 @@ const monsters = [
   }
 ]
 
+// Total amount of summons
+let statsTotal = 0;
+
 // What happens when you click the summon button
 document.getElementById('summon').addEventListener('click', function() {
   document.getElementById('loading-summon').style.display = 'block'; // Display the loading image
@@ -38,6 +48,13 @@ document.getElementById('summon').addEventListener('click', function() {
   setTimeout(function() {
     document.getElementById('loading-summon').style.display = 'none'; // Hide the loading image
     document.getElementById('monster-summon').style.display = 'block'; // Display the monster name again since we hid it
+
+    // Update summon counter
+    updateStats();
+    function updateStats() {
+      statsTotal++;
+      document.getElementById('stats-total').innerText = statsTotal;
+    }
 
     // Get a random monster from the object array
     let randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
@@ -54,19 +71,19 @@ document.getElementById('summon').addEventListener('click', function() {
     let randomMonsterStars = randomMonster.stars;
     switch(randomMonsterStars) {
       case 1:
-        console.log('1 Star');
+        document.getElementById('monster-stars').innerHTML = '<div class="star"></div>'
         break;
       case 2:
-        console.log('2 Star');
+        document.getElementById('monster-stars').innerHTML = '<div class="star"></div><div class="star"></div>'
         break;
       case 3:
-        console.log('3 Star');
+        document.getElementById('monster-stars').innerHTML = '<div class="star"></div><div class="star" style="margin-top:-10px"></div><div class="star"></div>'
         break;
       case 4:
-        console.log('4 Star');
+        document.getElementById('monster-stars').innerHTML = '<div class="star"></div><div class="star" style="margin-top:-10px"></div><div class="star" style="margin-top:-10px"></div><div class="star"></div>'
         break;
       case 5:
-        console.log('5 Star');
+        document.getElementById('monster-stars').innerHTML = '<div class="star"></div><div class="star" style="margin-top:-10px"></div><div class="star" style="margin-top:-15px"></div><div class="star" style="margin-top:-10px"></div><div class="star"></div>'
         break;
       default:
         console.log('Invalid stars');
