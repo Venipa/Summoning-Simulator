@@ -53,7 +53,13 @@ for (let i = 0; i < scrollType.length; i++) {
 };
 
 // What happens when you click the summon button
-
+function getRandomStar() {
+  const random = Math.random() * 915;
+  if (random <= 5) return 5;
+  if (random <= 80) return 4;
+  if (random <= 915) return 3;
+  return null;
+}
 document.getElementById('summon').addEventListener('click', function() {
   if (document.getElementById('legendary').classList.contains('active')) {
 
@@ -64,21 +70,10 @@ document.getElementById('summon').addEventListener('click', function() {
     console.log('ld');
   } else if (document.getElementById('mystical').classList.contains('active')) {
 
-    let random = Math.random() * 915;
-    if (random <= 5) {
-
-      // 5 star
-
-    } else if (random <= 80) {
-
-      // 4 star
-
-    } else if (random <= 915) {
-
-      // 3 star
-
-    } else {
-      console.log('error');
+    var generatedStar = getRandomStar();
+    if (generatedStar == null) {
+      console.error("Invalid generated Star");
+      return;
     }
 
   } else if (document.getElementById('fire').classList.contains('active')) {
