@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F7F8FA;
+  font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  color: #7E8692;
+  line-height: 1.4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgba(139, 97, 9, 0.85);
+  padding: 2rem 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFF;
+  position: relative;
+}
+
+header::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/background.jpg);
+  background-position: center 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+main {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+main .container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+main .summoning-scrolls,
+main .summoning,
+main .summoning-stats {
+  border-radius: 0.25rem;
+  background-color: #FFF;
+  border: 1px solid #E7E9EF;
+  padding: 1rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.008),0 6.7px 5.3px rgba(0, 0, 0, 0.012),0 12.5px 10px rgba(0, 0, 0, 0.015),0 22.3px 17.9px rgba(0, 0, 0, 0.018),0 41.8px 33.4px rgba(0, 0, 0, 0.022),0 100px 80px rgba(0, 0, 0, 0.03);
+}
+
+main .summoning-scrolls {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+main .summoning-scrolls ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+main .summoning-scrolls ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid #E7E9EF;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+main .summoning-scrolls ul li:hover,
+main .summoning-scrolls ul li:focus {
+  background-color: #F9DC9F;
+  border-color: #8B6109;
+  color: #8B6109;
+  cursor: pointer;
+}
+
+main .summoning-scrolls ul li .scroll,
+main .summoning-scrolls ul li .scroll img {
+  height: 35px;
+  width: 35px;
+  border-radius: 0.25rem;
+}
+
+main .summoning-scrolls ul li .scroll {
+  margin-right: 1rem;
+}
+
+main .summoning-scrolls ul li .scroll-title {
+  flex-grow: 1;
+}
+
+main .summoning-scrolls ul li .label {
+  background-color: #E7E9EF;
+  border: 1px solid transparent;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+main .summoning-scrolls ul li:hover .label,
+main .summoning-scrolls ul li:focus .label {
+  background-color: transparent;
+  border: 1px solid #8B6109;
+  color: #8B6109;
+}
+
+main .summoning {
+  flex-grow: 1;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .summoning .loading {
+  background-image: url(../img/summoning.svg);
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  display: none;
+  -webkit-animation: rotate 4s linear infinite;
+  -moz-animation: rotate 4s linear infinite;
+  animation: rotate 4s linear infinite;
+}
+
+main .summoning .monster {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #8B6109;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+main .summoning .monster .monster-name {
+  font-size: 1rem;
+}
+
+main .summoning .monster .monster-awaken {
+  font-size: 2rem;
+}
+
+main .summoning .monster .monster-image {
+  margin-top: 2rem;
+}
+
+main .summoning-stats {
+  width: 320px;
+}
+
+footer {
+  background-color: #FFF;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #8B6109;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #8B6109;
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 0.25rem;
+  outline: 0;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #F9DC9F;
+}
+
+@-moz-keyframes rotate {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}

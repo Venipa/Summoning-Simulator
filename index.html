@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Summoners War - Summoning Simulator</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        Summoners War - Summoning Simulator
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="summoning-scrolls">
+          <ul>
+            <li>
+              <div class="scroll">
+                <img src="/assets/img/scrolls/scroll_legendary.png" />
+              </div>
+              <div class="scroll-title">Legendary Scroll</div>
+              <div class="label">4-5</div>
+            </li>
+            <li>
+              <div class="scroll">
+                <img src="/assets/img/scrolls/scroll_lightdark.png" />
+              </div>
+              <div class="scroll-title">Light & Darkness Scroll</div>
+              <div class="label">3-5</div>
+            </li>
+            <li>
+              <div class="scroll">
+                <img src="/assets/img/scrolls/scroll_mystical.png" />
+              </div>
+              <div class="scroll-title">Mystical Scroll</div>
+              <div class="label">3-5</div>
+            </li>
+            <li>
+              <div class="scroll">
+                <img src="/assets/img/scrolls/scroll_fire.png" />
+              </div>
+              <div class="scroll-title">Fire Scroll</div>
+              <div class="label">3-5</div>
+            </li>
+            <li>
+              <div class="scroll">
+                <img src="/assets/img/scrolls/scroll_water.png" />
+              </div>
+              <div class="scroll-title">Water Scroll</div>
+              <div class="label">3-5</div>
+            </li>
+            <li>
+              <div class="scroll">
+                <img src="/assets/img/scrolls/scroll_wind.png" />
+              </div>
+              <div class="scroll-title">Wind Scroll</div>
+              <div class="label">3-5</div>
+            </li>
+          </ul>
+          <button type="button" class="button" id="summon">Summon</button>
+        </div>
+        <div class="summoning">
+          <div class="loading" id="loading-summon"></div>
+          <div class="monster" id="monster-summon">
+            <div class="monster-label" id="monster-label">Your summoned monster will appear here</div>
+            <div class="monster-stars" id="monster-stars"></div>
+            <div class="monster-name" id="monster-name"></div>
+            <div class="monster-awaken" id="monster-awaken"></div>
+            <div class="monster-image"><img id="monster-image" /></div>
+          </div>
+        </div>
+        <div class="summoning-stats">
+
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        &copy; 2020
+      </div>
+    </footer>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+  </body>
+</html>
