@@ -5,35 +5,35 @@ const monsters = [
     awakenName: 'Loren',
     element: 'Light',
     stars: 3,
-    image: '/assets/img/monsters/loren.png'
+    image: 'assets/img/monsters/loren.png'
   },
   {
     name: 'Gargoyle',
     awakenName: 'Malite',
     element: 'Wind',
     stars: 4,
-    image: '/assets/img/monsters/malite.png'
+    image: 'assets/img/monsters/malite.png'
   },
   {
     name: 'Hell Lady',
     awakenName: 'Beth',
     element: 'Water',
     stars: 5,
-    image: '/assets/img/monsters/beth.png'
+    image: 'assets/img/monsters/beth.png'
   },
   {
     name: 'Beast Monk',
     awakenName: 'Rahul',
     element: 'Dark',
     stars: 5,
-    image: '/assets/img/monsters/rahul.png'
+    image: 'assets/img/monsters/rahul.png'
   },
   {
     name: 'Panda Warrior',
     awakenName: 'Feng Yan',
     element: 'Wind',
     stars: 5,
-    image: '/assets/img/monsters/feng_yan.png'
+    image: 'assets/img/monsters/feng_yan.png'
   }
 ]
 
