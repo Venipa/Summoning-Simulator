@@ -1,26 +1,40 @@
-const scrollMystical = monsters.filter(function(x) {
-  return ['Fire', 'Wind', 'Water'].includes(x.element);
-});
+Array.prototype.random = function() {
+  return this[Math.floor(Math.random() * this.length)];
+};
+function scrollMystical() {
+  return monsters.filter(function(x) {
+    return ["Fire", "Wind", "Water"].includes(x.element);
+  });
+}
 
-const scrollFire = monsters.filter(function(x) {
-  return x.element === "Fire";
-});
+function scrollFire() {
+  return monsters.filter(function(x) {
+    return x.element === "Fire";
+  });
+}
+function scrollWater() {
+  return monsters.filter(function(x) {
+    return x.element === "Water";
+  });
+}
+function scrollWind() {
+  return monsters.filter(function(x) {
+    return x.element === "Wind";
+  });
+}
+function scrollLightDark() {
+  return monsters.filter(function(x) {
+    return ["Light", "Dark"].includes(x.element);
+  });
+}
 
-const scrollWater = monsters.filter(function(x) {
-  return x.element === "Water";
-});
-
-const scrollWind = monsters.filter(function(x) {
-  return x.element === "Wind";
-});
-
-const scrollLightDark = monsters.filter(function(x) {
-  return ['Light', 'Dark'].includes(x.element);
-});
-
-const scrollLegendary = monsters.filter(function(x) {
-  return [4, 5].includes(x.stars) && ['Fire', 'Water', 'Wind'].includes(x.element);
-});
+function scrollLegendary()() {
+  return monsters.filter(function(x) {
+    return (
+      [4, 5].includes(x.stars) && ["Fire", "Water", "Wind"].includes(x.element)
+    );
+  });
+}
 
 // Total amount of summons
 let statsTotal = 0;
@@ -37,20 +51,20 @@ let statsDark = 0;
 let latestSummons = [];
 
 // Select scroll
-const scrollList = document.getElementById('scrolls');
-const scrollType = document.getElementsByTagName('li');
+const scrollList = document.getElementById("scrolls");
+const scrollType = document.getElementsByTagName("li");
 
 for (let i = 0; i < scrollType.length; i++) {
-  scrollType[i].addEventListener('click', function() {
-    let current = document.getElementsByClassName('active');
+  scrollType[i].addEventListener("click", function() {
+    let current = document.getElementsByClassName("active");
 
     if (current.length > 0) {
-      current[0].className = current[0].className.replace(' active', '');
+      current[0].className = current[0].className.replace(" active", "");
     }
 
-    this.className += ' active';
-  })
-};
+    this.className += " active";
+  });
+}
 
 // What happens when you click the summon button
 function getRandomStar() {
@@ -60,34 +74,32 @@ function getRandomStar() {
   if (random <= 915) return 3;
   return null;
 }
-document.getElementById('summon').addEventListener('click', function() {
-  if (document.getElementById('legendary').classList.contains('active')) {
-
-    let summonLegendary = scrollLegendary[Math.floor(Math.random() * scrollLegendary.length)];
+document.getElementById("summon").addEventListener("click", function() {
+  if (document.getElementById("legendary").classList.contains("active")) {
+    let summonLegendary =
+      scrollLegendary().random();
     console.log(summonLegendary.awakenName);
-
-  } else if (document.getElementById('ld').classList.contains('active')) {
-    console.log('ld');
-  } else if (document.getElementById('mystical').classList.contains('active')) {
-
+  } else if (document.getElementById("ld").classList.contains("active")) {
+    console.log("ld");
+  } else if (document.getElementById("mystical").classList.contains("active")) {
     var generatedStar = getRandomStar();
     if (generatedStar == null) {
       console.error("Invalid generated Star");
       return;
     }
-
-  } else if (document.getElementById('fire').classList.contains('active')) {
-    console.log('fire');
-  } else if (document.getElementById('water').classList.contains('active')) {
-    console.log('water');
-  } else if (document.getElementById('wind').classList.contains('active')) {
-    console.log('wind');
+  } else if (document.getElementById("fire").classList.contains("active")) {
+    console.log("fire");
+  } else if (document.getElementById("water").classList.contains("active")) {
+    console.log("water");
+  } else if (document.getElementById("wind").classList.contains("active")) {
+    console.log("wind");
   } else {
-    alert('Select a scroll before summoning!');
+    alert("Select a scroll before summoning!");
   }
 });
 
-let summonMystical = scrollMystical[Math.floor(Math.random() * scrollMystical.length)];
+let summonMystical =
+  scrollMystical().random();
 console.log(summonMystical);
 
 /*
